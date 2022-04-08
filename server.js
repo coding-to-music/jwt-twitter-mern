@@ -52,11 +52,11 @@ app.get("/api", function (req, res) {
 });
 
 // All remaining requests return the React app, so it can handle routing.
-app.get("*", function (request, response) {
-  response.sendFile(
-    path.resolve(__dirname, "../client/build/static/js/", "main.*.js")
-  );
-});
+// app.get("*", function (request, response) {
+//   response.sendFile(
+//     path.resolve(__dirname, "../client/build/static/js/", "main.*.js")
+//   );
+// });
 
 // routes
 app.use("/api/user", userRoutes);
