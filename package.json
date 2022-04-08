@@ -10,6 +10,7 @@
   "scripts": {
     "start": "nodemon server",
     "build": "cd client && npm install && npm run build",
+    "prod": "react-scripts start",
     "deploy": "git add . && git commit -m Heroku && git push && git push heroku && heroku logs --tail --remote heroku"
   },
   "keywords": [],
