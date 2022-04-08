@@ -1,10 +1,15 @@
 {
-  "name": "mern-project",
+  "name": "jwt-twitter-mern",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
-    "start": "nodemon server"
+    "start": "npm run build && node server ",
+    "deploy": "git add . && git commit -m Heroku && git push && git push heroku && heroku logs --tail --remote heroku",
+    "oldstart": "nodemon server"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +30,9 @@
     "nodemon": "^2.0.6",
     "reactjs-popup": "^2.0.4",
     "validator": "^13.1.17"
-  }
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ]
 }
