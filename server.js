@@ -12,6 +12,10 @@ const REACT_APP_MONGODB_URI = process.env.MONGODB_URI;
 // console.log("REACT_APP_MONGODB_URI", REACT_APP_MONGODB_URI);
 
 require("./config/db");
+
+// ℹ️ Sets the PORT for our app to have access to it. If no env has been set, we hard code it to 3000
+const PORT = process.env.PORT || 5005;
+
 const { checkUser, requireAuth } = require("./middleware/auth.middleware");
 const cors = require("cors");
 
@@ -42,6 +46,6 @@ app.use("/api/user", userRoutes);
 app.use("/api/post", postRoutes);
 
 // server
-app.listen(process.env.PORT, () => {
-  console.log(`Listening on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT});
 });

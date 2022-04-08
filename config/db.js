@@ -28,7 +28,7 @@ require("dotenv").config();
 
 const REACT_APP_MONGODB_URI = process.env.REACT_APP_MONGODB_URI;
 
-console.log(REACT_APP_MONGODB_URI);
+// console.log(REACT_APP_MONGODB_URI);
 // const REACT_APP_MONGODB_URI = require("../utils/consts");
 
 // ℹ️ package responsible to make the connection with mongodb
