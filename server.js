@@ -9,7 +9,7 @@ require("dotenv").config();
 
 const REACT_APP_MONGODB_URI = process.env.MONGODB_URI;
 
-console.log("REACT_APP_MONGODB_URI", REACT_APP_MONGODB_URI);
+// console.log("REACT_APP_MONGODB_URI", REACT_APP_MONGODB_URI);
 
 require("./config/db");
 const { checkUser, requireAuth } = require("./middleware/auth.middleware");
