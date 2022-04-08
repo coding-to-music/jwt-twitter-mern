@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server",
-    "build": "cd client && npm install && npm run build && serve -s build",
+    "build": "cd client && npm install && npm run build",
     "deploy": "git add . && git commit -m Heroku && git push && git push heroku && heroku logs --tail --remote heroku",
     "oldstart": "nodemon server"
   },
