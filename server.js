@@ -64,5 +64,6 @@ app.use("/api/post", postRoutes);
 
 // server
 app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+  // console.log(`Listening on port ${PORT}`);
+  console.log(`💥 Application is listening on port http://localhost:${PORT}`);
 });
