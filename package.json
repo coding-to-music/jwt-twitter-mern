@@ -7,7 +7,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "npm run build && node server ",
+    "start": "node server",
     "deploy": "git add . && git commit -m Heroku && git push && git push heroku && heroku logs --tail --remote heroku",
     "oldstart": "nodemon server"
   },
