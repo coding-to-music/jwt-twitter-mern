@@ -29,6 +29,9 @@ Start client : `cd client` + `npm start`
   - DB_USER_PASS=fs:fromscratch `your ID & password`
   - TOKEN_SECRET=990bf68e6adf1be5f1671bba3bec692056922454 `your random secret key`
 
+* Node.js routes used with controller functions
+* ![Nodejs diagram](./client/public/img/diagram.png)
+
 ---
 
 ### Front config :
