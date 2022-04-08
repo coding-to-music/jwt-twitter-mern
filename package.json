@@ -8,8 +8,9 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "node server && cd client && npm run start",
-    "build": "cd client && npm install && npm run build",
+    "start": "cd client && npm run start",
+    "anotherstart": "node server && cd client && npm run start",
+    "build": "cd client && npm install && npm run build && cd .. && node server ",
     "deploy": "git add . && git commit -m Heroku && git push && git push heroku && heroku logs --tail --remote heroku",
     "oldstart": "nodemon server"
   },
