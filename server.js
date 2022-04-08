@@ -41,6 +41,20 @@ app.get("/jwtid", requireAuth, (req, res) => {
   res.status(200).send(res.locals.user._id);
 });
 
+// Priority serve any static files.
+app.use(express.static(path.resolve(__dirname, "../react-ui/build")));
+
+// Answer API requests.
+app.get("/api", function (req, res) {
+  res.set("Content-Type", "application/json");
+  res.send('{"message":"Hello from the custom server!"}');
+});
+
+// All remaining requests return the React app, so it can handle routing.
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "../react-ui/build", "index.html"));
+});
+
 // routes
 app.use("/api/user", userRoutes);
 app.use("/api/post", postRoutes);
