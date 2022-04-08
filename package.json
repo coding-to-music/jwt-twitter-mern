@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://jwt-twitter-mern.herokuapp.com",
   "engines": {
     "node": "16.x"
   },
   "scripts": {
     "start": "node server",
-    "build": "cd client/ && npm install && npm run build",
+    "build": "cd client && npm install && npm run build && serve -s build",
     "deploy": "git add . && git commit -m Heroku && git push && git push heroku && heroku logs --tail --remote heroku",
     "oldstart": "nodemon server"
   },
