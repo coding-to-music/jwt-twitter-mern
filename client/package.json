@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jwt-twitter-mern.herokuapp.com",
   "engines": {
     "node": "16.x"
   },
@@ -23,6 +24,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
+    "serve": "^13.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
