@@ -42,7 +42,7 @@ app.get("/jwtid", requireAuth, (req, res) => {
   res.status(200).send(res.locals.user._id);
 });
 
-Priority serve any static files.
+// Priority serve any static files.
 app.use(express.static(path.resolve(__dirname, "/client/build/")));
 
 // Answer API requests.

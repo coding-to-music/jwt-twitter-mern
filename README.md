@@ -163,6 +163,8 @@ Attempted this:
 ```java
 heroku config:set JS_RUNTIME_TARGET_BUNDLE=/client/build/static/js/*.js
 
+heroku config:set JS_RUNTIME_TARGET_BUNDLE=/build/static/js/*.js
+
 # and to remote it:
 
 heroku config:unset JS_RUNTIME_TARGET_BUNDLE
