@@ -60,9 +60,7 @@ const SignUpForm = () => {
         <>
           <SignInForm />
           <span></span>
-          <h4 className="success">
-            Enregistrement réussi, veuillez-vous connecter
-          </h4>
+          <h4 className="success">Registration successful, please log in</h4>
         </>
       ) : (
         <form action="" onSubmit={handleRegister} id="sign-up-form">
