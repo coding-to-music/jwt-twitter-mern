@@ -49,12 +49,12 @@ const Card = ({ post }) => {
           </div>
           <div className="card-right">
             <div className="card-header">
-              <div className="pseudo">
+              <div className="username">
                 <h3>
                   {!isEmpty(usersData[0]) &&
                     usersData
                       .map((user) => {
-                        if (user._id === post.posterId) return user.pseudo;
+                        if (user._id === post.posterId) return user.username;
                         else return null;
                       })
                       .join("")}

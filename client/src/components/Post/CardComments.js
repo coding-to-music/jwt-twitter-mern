@@ -15,9 +15,9 @@ const CardComments = ({ post }) => {
     e.preventDefault();
 
     if (text) {
-      dispatch(addComment(post._id, userData._id, text, userData.pseudo))
+      dispatch(addComment(post._id, userData._id, text, userData.username))
         .then(() => dispatch(getPosts()))
-        .then(() => setText(''));
+        .then(() => setText(""));
     }
   };
 
@@ -49,8 +49,8 @@ const CardComments = ({ post }) => {
             </div>
             <div className="right-part">
               <div className="comment-header">
-                <div className="pseudo">
-                  <h3>{comment.commenterPseudo}</h3>
+                <div className="username">
+                  <h3>{comment.commenterusername}</h3>
                   {comment.commenterId !== userData._id && (
                     <FollowHandler
                       idToFollow={comment.commenterId}

@@ -8,7 +8,7 @@ const postRoutes = require("./routes/post.routes");
 // dotenv config
 require("dotenv").config();
 
-const REACT_APP_MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // console.log("REACT_APP_MONGODB_URI", REACT_APP_MONGODB_URI);
 
