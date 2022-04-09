@@ -66,7 +66,7 @@ const SignUpForm = () => {
         </>
       ) : (
         <form action="" onSubmit={handleRegister} id="sign-up-form">
-          <label htmlFor="pseudo">Pseudo</label>
+          <label htmlFor="pseudo">Username</label>
           <br />
           <input
             type="text"
@@ -88,7 +88,7 @@ const SignUpForm = () => {
           />
           <div className="email error"></div>
           <br />
-          <label htmlFor="password">Mot de passe</label>
+          <label htmlFor="password">Password</label>
           <br />
           <input
             type="password"
@@ -99,8 +99,8 @@ const SignUpForm = () => {
           />
           <div className="password error"></div>
           <br />
-          <label htmlFor="password-conf">Confirmer mot de passe</label>
-          <br/>
+          <label htmlFor="password-conf">Confirm Password</label>
+          <br />
           <input
             type="password"
             name="password"
