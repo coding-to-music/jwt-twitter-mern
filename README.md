@@ -12,7 +12,13 @@ https://jwt-twitter-mern.herokuapp.com
 
 by Andrew Bateman https://github.com/AndrewJBateman
 
-https://github.com/AndrewJBateman/jwt-twitter-mern
+https://github.com/AndrewJBateman/mern-project
+
+Originally from:
+
+💻 Made by Julien Az, November 2020. Free to use
+
+https://github.com/JustFS/mern-project
 
 Start server : `npm start`
 
