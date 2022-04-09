@@ -29,7 +29,7 @@ const SignUpForm = () => {
           "Les mots de passe ne correspondent pas";
 
       if (!terms.checked)
-        termsError.innerHTML = "Veuillez valider les conditions générales";
+        termsError.innerHTML = "Please validate the terms and conditions";
     } else {
       await axios({
         method: "post",
@@ -114,12 +114,12 @@ const SignUpForm = () => {
           <label htmlFor="terms">
             J'accepte les{" "}
             <a href="/" target="_blank" rel="noopener noreferrer">
-              conditions générales
+              terms and conditions
             </a>
           </label>
           <div className="terms error"></div>
           <br />
-          <input type="submit" value="Valider inscription" />
+          <input type="submit" value="Validate registration" />
         </form>
       )}
     </>
