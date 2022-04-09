@@ -11,9 +11,9 @@ require("dotenv").config();
 const MONGODB_URI = process.env.MONGODB_URI;
 
 console.log("MONGODB_URI", MONGODB_URI);
-
 console.log("REACT_APP_API_URL", process.env.REACT_APP_API_URL);
-console.log("REACT_APP_CLIENT_URL", process.env.REACT_APP_CLIENT_URL);
+
+// console.log("REACT_APP_CLIENT_URL", process.env.REACT_APP_CLIENT_URL);
 
 require("./config/db");
 
