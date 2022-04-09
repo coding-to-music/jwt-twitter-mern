@@ -4,7 +4,7 @@ import { UidContext } from "./components/AppContext";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { getUser } from "./actions/user.actions";
-require("dotenv").config();
+// require("dotenv").config();
 
 console.log("REACT_APP_API_URL", process.env.REACT_APP_API_URL);
 
