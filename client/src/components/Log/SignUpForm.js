@@ -112,7 +112,7 @@ const SignUpForm = () => {
           <br />
           <input type="checkbox" id="terms" />
           <label htmlFor="terms">
-            J'accepte les{" "}
+            I accept the{" "}
             <a href="/" target="_blank" rel="noopener noreferrer">
               terms and conditions
             </a>
