@@ -81,6 +81,88 @@ git push heroku
 npm run deploy
 ```
 
+### Heroku Buildpack
+
+See this repo for more info about setting up a node/react app on heroku:
+
+https://github.com/mars/heroku-cra-node
+
+```java
+heroku buildpacks
+
+heroku buildpacks --help
+
+heroku buildpacks:clear
+
+```
+
+```java
+heroku buildpacks
+```
+
+Output:
+
+```java
+=== jwt-twitter-mern Buildpack URL
+heroku/nodejs
+```
+
+### Notice we are doing a SET and then and ADD
+
+```java
+heroku buildpacks:set heroku/nodejs
+
+heroku buildpacks:add mars/create-react-app
+```
+
+Output:
+
+```java
+Buildpack added. Next release on jwt-twitter-mern will use:
+  1. heroku/nodejs
+  2. mars/create-react-app
+Run git push heroku main to create a new release using these buildpacks.
+```
+
+### Lets try reversing the order
+
+```java
+heroku buildpacks:set mars/create-react-app
+
+heroku buildpacks:add heroku/nodejs
+```
+
+```java
+heroku buildpacks
+```
+
+Output:
+
+```java
+=== jwt-twitter-mern Buildpack URL
+heroku/nodejs
+```
+
+### Push to Heroku
+
+```
+git push heroku
+```
+
+## Error:
+
+```java
+2022-03-29T08:06:58.791397+00:00 heroku[web.1]: Starting process with command `npm start`
+2022-03-29T08:06:59.934025+00:00 app[web.1]: ls: cannot access '/client/build/static/js/*.js': No such file or directory
+2022-03-29T08:06:59.938326+00:00 app[web.1]: Error injecting runtime env: bundle not found '/client/build/static/js/*.js'. See: https://github.com/mars/create-react-app-buildpack/blob/master/README.md#user-content-custom-bundle-location
+```
+
+Attempted this:
+
+```java
+heroku config:set JS_RUNTIME_TARGET_BUNDLE=/client/build/static/js/*.js
+```
+
 ## update npm packages
 
 ```java
