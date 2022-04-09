@@ -26,10 +26,10 @@
 // dotenv config
 require("dotenv").config();
 
-const REACT_APP_MONGODB_URI = process.env.REACT_APP_MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI;
 
-// console.log(REACT_APP_MONGODB_URI);
-// const REACT_APP_MONGODB_URI = require("../utils/consts");
+// console.log(MONGODB_URI);
+// const MONGODB_URI = require("../utils/consts");
 
 // ℹ️ package responsible to make the connection with mongodb
 // https://www.npmjs.com/package/mongoose
@@ -37,7 +37,7 @@ const REACT_APP_MONGODB_URI = process.env.REACT_APP_MONGODB_URI;
 const mongoose = require("mongoose");
 
 mongoose
-  .connect(REACT_APP_MONGODB_URI)
+  .connect(MONGODB_URI)
   .then((x) => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
