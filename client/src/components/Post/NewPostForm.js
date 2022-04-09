@@ -102,8 +102,8 @@ const NewPostForm = () => {
                 </div>
                 <div className="card-right">
                   <div className="card-header">
-                    <div className="pseudo">
-                      <h3>{userData.pseudo}</h3>
+                    <div className="username">
+                      <h3>{userData.username}</h3>
                     </div>
                     <span>{timestampParser(Date.now())}</span>
                   </div>

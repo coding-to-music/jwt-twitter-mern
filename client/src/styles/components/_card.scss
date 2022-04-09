@@ -63,7 +63,7 @@
         flex-direction: column;
       }
 
-      .pseudo {
+      .username {
         display: flex;
 
         @media screen and(max-width: 590px) {
@@ -238,7 +238,7 @@
           flex-direction: column;
         }
 
-        .pseudo {
+        .username {
           display: flex;
 
           h3 {

@@ -28,7 +28,8 @@ require("dotenv").config();
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
-// console.log(MONGODB_URI);
+console.log(MONGODB_URI);
+
 // const MONGODB_URI = require("../utils/consts");
 
 // ℹ️ package responsible to make the connection with mongodb
