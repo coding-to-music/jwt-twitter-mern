@@ -43,19 +43,19 @@ app.get("/jwtid", requireAuth, (req, res) => {
 });
 
 // Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, "/client/build/")));
+app.use(express.static(path.resolve(__dirname, "./client/build/")));
+
+// All remaining requests return the React app, so it can handle routing.
+app.get("*", function (request, response) {
+  response.sendFile(
+    path.resolve(__dirname, "./client/build/static/js/", "main.*.js")
+  );
+});
 
 // Answer API requests.
 app.get("/api", function (req, res) {
   res.set("Content-Type", "application/json");
   res.send('{"message":"Hello from the custom server!"}');
-});
-
-// All remaining requests return the React app, so it can handle routing.
-app.get("*", function (request, response) {
-  response.sendFile(
-    path.resolve(__dirname, "/client/build/static/js/", "main.*.js")
-  );
 });
 
 // routes
